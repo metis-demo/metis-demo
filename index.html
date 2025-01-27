@@ -164,8 +164,14 @@
 
         <div class="mt-8 mb-8" id="gallery">
           <div class="flex mx-auto justify-center max-w-screen-lg gap-8 py-8">
-            <img src="static/pre-train.png" class="w-1/2"></img>
-            <img src="static/finetune.png" class="w-1/2"></img>
+            <div class="w-1/2">
+              <img src="static/pre-train.png" class="w-full"></img>
+              <p class="text-center text-sm mt-2">Pre-training.</p>
+            </div>
+            <div class="w-1/2">
+              <img src="static/finetune.png" class="w-full"></img>
+              <p class="text-center text-sm mt-2">Fine-tuning.</p>
+            </div>
           </div>
           <p>
             The overview of pre-training (left) and fine-tuning (right). The model predicts masked SSL tokens without any
@@ -174,275 +180,26 @@
         </div>
 
 
-        <!-- <div class="w-full overflow-x-auto">
-          <div class="relative w-[700px] mx-auto text-sm text-left rtl:text-right text-gray-900">
-            <table>
-              <caption style="caption-side: bottom; text-align: left;"><b>Note</b>: For Vevo-Timbre, we
-                directly extract
-                the
-                content-style tokens from the source speech, and input them into flow-matching
-                transformer for generation.</caption>
-              <thead>
-                <tr>
-                  <th style="text-align: center;">Task</th>
-                  <th style="text-align: center;">Model</th>
-                  <th style="text-align: center;">Source</th>
-                  <th style="text-align: center;">Style Reference</th>
-                  <th style="text-align: center;">Timbre Reference</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td style="background-color: #f4f4f4;"><b>Zero-Shot<br>Timbre Imitation</b></td>
-                  <td>
-                    <b>Vevo-Timbre</b>
-                  </td>
-                  <td>
-                    \( \textcolor{blue}{U_i} \)
-                  </td>
-                  <td>/</td>
-                  <td>
-                    \( \textcolor{red}{U_r} \)
-                  </td>
-                </tr>
-                <tr>
-                  <td style="background-color: #f4f4f4;"><b>Zero-Shot<br>Style Imitation</b></td>
-                  <td>
-                    <b>Vevo-Style</b>
-                  </td>
-                  <td>
-                    \( \textcolor{blue}{U_i} \)
-                  </td>
-                  <td>\( \textcolor{red}{U_r} \)</td>
-                  <td>
-                    \( \textcolor{blue}{U_i} \)
-                  </td>
-                </tr>
-                <tr>
-                  <td rowspan="2" style="background-color: #f4f4f4;"><b>Zero-Shot<br>Voice
-                      Imitation</b></td>
-                  <td>
-                    <b>Vevo-Voice</b>
-                  </td>
-                  <td>
-                    \( \textcolor{blue}{U_i} \)
-                  </td>
-                  <td>\( \textcolor{red}{U_r} \)</td>
-                  <td>
-                    \( \textcolor{red}{U_r} \)
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <b>Vevo-TTS</b>
-                  </td>
-                  <td>
-                    \( \textcolor{blue}{T_i} \)
-                  </td>
-                  <td>\( \textcolor{red}{U_r} \)</td>
-                  <td>
-                    \( \textcolor{red}{U_r} \)
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div> -->
-
-
-
-        <div class="mt-8 mb-8">
-          <p>
-            We will showcase the diverse capabilities of Vevo through the following examples.
-          </p>
+        <div class="mt-8 mb-8" id="metis-tts">
+          <h4>Zero-shot Text-to-Speech</h4>
         </div>
 
-        <div class="w-full overflow-x-auto">
-          <div class="relative w-[1200px] mx-auto text-sm text-left rtl:text-right text-gray-900">
-            <table class="table-gallery">
-              <thead>
-                <tr>
-                  <th style="text-align: center; width: 9%;">Model</th>
-                  <th style="text-align: center; width: 19%;">Source</th>
-                  <th style="text-align: center; width: 19%;">Style Reference</th>
-                  <th style="text-align: center; width: 19%;">Timbre Reference</th>
-                  <th style="text-align: center; width: 19%;">Results</th>
-                  <th style="text-align: center; width: 15%;">Applications</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="background-color: #f4f4f4;" rowspan="2">
-                    <b>Vevo-TTS</b>
-                  </td>
-                  <td>
-                    I'm a versatile zero-shot voice cloner. I can mimic a wide range of vocal styles
-                    from
-                    either text or waveform as input.
-                  </td>
-                  <td colspan="2">
-                    <audio controls preload="auto">
-                      <source src="data/gallery/tts_prompt.wav">
-                    </audio>
-                    <span class="text-blue-500">American-accented</span>, <span class="text-red-500">Female</span>
-                  </td>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/tts_versacloner_I.wav">
-                    </audio>
-                    <span class="text-blue-500">American-accented</span>, <span class="text-red-500">Female</span>
-                  </td>
-                  <td rowspan="2">
-                    <b>Style and Timbre Controllable TTS</b>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    I don't really care what you call me. I've been a silent spectator, watching species evolve, empires
-                    rise and fall. But always remember, I am mighty and enduring. Respect me and I'll nurture you;
-                    ignore me and you shall face the consequences.
-                  </td>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/vc_prompt_arabic.wav">
-                    </audio>
-                    <span class="text-blue-500">Arabic-accented</span>, Male
-                  </td>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/disentangledtts_timbre.wav">
-                    </audio>
-                    Mandarin, <span class="text-red-500">Female</span>
-                  </td>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/disentangledtts_result.wav">
-                    </audio>
-                    <span class="text-blue-500">Arabic-accented</span>, <span class="text-red-500">Female</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="background-color: #f4f4f4;">
-                    <b>Vevo-Timbre</b>
-                  </td>
-                  <td rowspan="2">
-                    <audio controls preload="auto">
-                      <source src="data/gallery/tts_versacloner_I.wav">
-                    </audio>
-                    <span class="text-blue-500">American-accented</span>, Female
-                  </td>
-                  <td>
-                    /
-                  </td>
-                  <td rowspan="2">
-                    <audio controls preload="auto">
-                      <source src="data/gallery/vc_prompt_arabic.wav">
-                    </audio>
-                    Arabic-accented, <span class="text-red-500">Male</span>
-                  </td>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/vc_timbre_arabic.wav">
-                    </audio>
-                    <span class="text-blue-500">American-accented</span>, <span class="text-red-500">Male</span>
-                  </td>
-                  <td rowspan="2">
-                    <b>Style-Preserved or Style-Converted VC</b>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style="background-color: #f4f4f4;">
-                    <b>Vevo-Voice</b>
-                  </td>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/vc_prompt_arabic.wav">
-                    </audio>
-                    <span class="text-blue-500">Arabic-accented</span>, Male
-                  </td>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/vc_timbre_and_style_arabic.wav">
-                    </audio>
-                    <span class="text-blue-500">Arabic-accented</span>, <span class="text-red-500">Male</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td rowspan="3" style="background-color: #f4f4f4;">
-                    <b>Vevo-Style</b>
-                  </td>
-                  <td rowspan="3">
-                    <audio controls preload="auto">
-                      <source src="data/gallery/tts_versacloner_I.wav">
-                    </audio>
-                    American-accented, <span class="text-red-500">Female</span>
-                  </td>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/vc_prompt_arabic.wav">
-                    </audio>
-                    <span class="text-blue-500">Arabic-accented</span>, Male
-                  </td>
-                  <td rowspan="3">
-                    <audio controls preload="auto">
-                      <source src="data/gallery/tts_versacloner_I.wav">
-                    </audio>
-                    American-accented, <span class="text-red-500">Female</span>
-                    <i>(Same as Source)</i>
-                  </td>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/vc_style_arabic.wav">
-                    </audio>
-                    <span class="text-blue-500">Arabic-accented</span>, <span class="text-red-500">Female</span>
-                  </td>
-                  <td rowspan="3">
-                    <b>Accent Conversion,<br>Emotion Conversion,<br>etc.</b>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/vc_prompt_angry.wav">
-                    </audio>
-                    <span class="text-blue-500">Emotional</span>, Male
-                  </td>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/vc_style_angry.wav">
-                    </audio>
-                    <span class="text-blue-500">Emotional</span>, <span class="text-red-500">Female</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/vc_prompt_slow.wav">
-                    </audio>
-                    <span class="text-blue-500">Slow-paced</span>, Male
-                  </td>
-                  <td>
-                    <audio controls preload="auto">
-                      <source src="data/gallery/vc_style_slow.wav">
-                    </audio>
-                    <span class="text-blue-500">Slow-paced</span>, <span class="text-red-500">Female</span>
-                  </td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
+        <div class="mt-8 mb-8" id="metis-vc">
+          <h4>Voice Conversion</h4>
         </div>
 
-
-        <div class="mt-8 mb-8" id="vevo-vc">
-          <h4>Timbre Imitation and Voice Imitation (Conversion Task)</h4>
+        <div class="mt-8 mb-8" id="metis-tse">
+          <h4>Target Speaker Extraction</h4>
         </div>
+
+        <div class="mt-8 mb-8" id="metis-se">
+          <h4>Speech Enhancement</h4>
+        </div>
+
+        <div class="mt-8 mb-8" id="metis-lip2speech">
+          <h4>Lip-to-Speech</h4>
+        </div>
+
 
         <div class="mt-8 mb-8">
           <h5>Vevo-Timbre <i>v.s.</i> Vevo-Voice</h5>
