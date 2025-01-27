@@ -188,12 +188,79 @@
           <h4>Voice Conversion</h4>
         </div>
 
+        <div class="mt-8 mb-8" id="metis-se">
+          <h4>Speech Enhancement</h4>
+        </div>
+
+        <div class="w-full overflow-x-auto">
+          <div class="relative w-[1026px] mx-auto text-sm text-left rtl:text-right text-gray-900">
+            <table style="width: 100%;">
+              <thead>
+                <tr>
+                  <th style="text-align: center; width: 25%;">Noisy Speech</th>
+                  <th style="text-align: center; width: 25%;">Metis-SE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <audio controls preload="metadata">
+                      <source src="data/se/noisy_0.wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls preload="metadata">
+                      <source src="data/se/metis_0.wav">
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <div class="mt-8 mb-8" id="metis-tse">
+        </div>
           <h4>Target Speaker Extraction</h4>
         </div>
 
-        <div class="mt-8 mb-8" id="metis-se">
-          <h4>Speech Enhancement</h4>
+        <div class="w-full overflow-x-auto">
+          <div class="relative w-[1026px] mx-auto text-sm text-left rtl:text-right text-gray-900">
+            <table style="width: 100%;">
+              <thead>
+                <tr>
+                  <th style="text-align: center; width: 25%;">Mixed Speech</th>
+                  <th style="text-align: center; width: 25%;">Reference Speech</th>
+                  <th style="text-align: center; width: 25%;">Target Speech</th>
+                  <th style="text-align: center; width: 25%;">Metis-TSE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <audio controls preload="metadata">
+                      <source src="data/tse/mix_0.wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls preload="metadata">
+                      <source src="data/tse/ref_0.wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls preload="metadata">
+                      <source src="data/tse/target_0.wav">
+                    </audio>
+                  </td>
+                  <td>
+                    <audio controls preload="metadata">
+                      <source src="data/tse/metis_0.wav">
+                    </audio>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div class="mt-8 mb-8" id="metis-lip2speech">
