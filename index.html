@@ -189,10 +189,10 @@
             <table id="tts-table" style="width: 100%;">
               <thead>
                 <tr>
-                  <th style="text-align: center; width: 4%;">Domain</th>
-                  <th style="text-align: center; width: 32%;">Text</th>
-                  <th style="text-align: center; width: 32%;">Prompt Speech</th>
-                  <th style="text-align: center; width: 32%;">Metis-TTS</th>
+                  <th style="text-align: center; width: 25%;">Domain</th>
+                  <th style="text-align: center; width: 25%;">Prompt Speech</th>
+                  <th style="text-align: center; width: 25%;">Text</th>
+                  <th style="text-align: center; width: 25%;">Metis-TTS</th>
                 </tr>
               </thead>
               <tbody>
@@ -201,30 +201,30 @@
                   <td style="background-color: #f4f4f4;" rowspan="3">
                     <b>Celebrities</b>
                   </td>
-                  <td><p>Add text here.</p></td>
                   <td>
                     <audio controls preload="none">
                       <source src="data/tts/celebrities/01_prompt.wav">
                     </audio>
                   </td>
+                  <td><p>Add text here.</p></td>
                   <td>
                     <audio controls preload="none">
                       <source src="data/tts/celebrities/01_metis.wav">
                     </audio>
                   </td>
                 </tr>
-      
+
                 <!-- Anime Characters -->
                 <tr class="tts-anime">
                   <td style="background-color: #f4f4f4;" rowspan="3">
-                    <b>Anime<br>Characters</b>
+                    <b>Anime Characters</b>
                   </td>
-                  <td><p>Add text here.</p></td>
                   <td>
                     <audio controls preload="none">
                       <source src="data/tts/anime/01_prompt.wav">
                     </audio>
                   </td>
+                  <td><p>Add text here.</p></td>
                   <td>
                     <audio controls preload="none">
                       <source src="data/tts/anime/01_metis.wav">
@@ -232,6 +232,77 @@
                   </td>
                 </tr>
 
+                <!-- Normal -->
+                <tr class="tts-normal">
+                  <td style="background-color: #f4f4f4;" rowspan="3">
+                    <b>Normal</b>
+                  </td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/01_prompt.wav">
+                    </audio>
+                  </td>
+                  <td><p>Add text here.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/01_metis.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <!-- Accent -->
+                <tr class="tts-accent">
+                  <td style="background-color: #f4f4f4;" rowspan="3">
+                    <b>Accent</b>
+                  </td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/01_prompt.wav">
+                    </audio>
+                  </td>
+                  <td><p>Add text here.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/01_metis.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <!-- Emotion -->
+                <tr class="tts-emotion">
+                  <td style="background-color: #f4f4f4;" rowspan="3">
+                    <b>Emotion</b>
+                  </td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/01_prompt.wav">
+                    </audio>
+                  </td>
+                  <td><p>Add text here.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/01_metis.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <!-- Hard Cases -->
+                <tr class="tts-hard">
+                  <td style="background-color: #f4f4f4;" rowspan="3">
+                    <b>Hard Cases</b>
+                  </td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/01_prompt.wav">
+                    </audio>
+                  </td>
+                  <td><p>Add text here.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/01_metis.wav">
+                    </audio>
+                  </td>
+                </tr>
 
               </tbody>
             </table>
@@ -243,8 +314,8 @@
               <button onclick="showTTSPage('tts-anime')">Anime Characters</button>
               <button onclick="showTTSPage('tts-normal')">Normal</button>
               <button onclick="showTTSPage('tts-accent')">Accent</button>
-              <button onclick="showTTSPage('tts-hard')">Hard Cases</button>
               <button onclick="showTTSPage('tts-emotion')">Emotion</button>
+              <button onclick="showTTSPage('tts-hard')">Hard Cases</button>
             </div>
           </div>
         </div>
