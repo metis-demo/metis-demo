@@ -150,42 +150,15 @@
         <div class="max-w-[900px] mx-auto mt-8 mb-16">
           <h2>Abstract</h2>
           <p class="text-p">
-            The imitation of voice, targeted on specific speech attributes such as timbre and speaking
-            style, is crucial
-            in speech generation. However, existing methods rely heavily on annotated data, and struggle
-            with
-            effectively disentangling timbre and style, leading to challenges in achieving controllable
-            generation,
-            especially in zero-shot scenarios. To address these issues, we propose <b>Vevo</b>, a
-            <b>ve</b>rsatile
-            zero-shot
-            <b>vo</b>ice
-            imitation framework with controllable timbre and style. Vevo operates in two core stages: (1)
-            <b>Content-Style
-              Modeling</b>: Given either text or speech's content tokens as input, we utilize an
-            autoregressive
-            transformer to
-            generate the content-style tokens, which is prompted by a style reference; (2) <b>Acoustic
-              Modeling</b>:
-            Given the
-            content-style tokens as input, we employ a flow-matching transformer to produce acoustic
-            representations,
-            which is prompted by a timbre reference. To obtain the content and content-style tokens of
-            speech, we design
-            a fully self-supervised approach that progressively decouples the timbre, style, and linguistic
-            content of
-            speech. Specifically, we adopt VQ-VAE as the tokenizer for the continuous hidden features of
-            HuBERT. We
-            treat the vocabulary size of the VQ-VAE codebook as the information bottleneck, and adjust it
-            carefully to
-            obtain the disentangled speech representations. Solely self-supervised trained on 60K hours of
-            audiobook
-            speech data, without any fine-tuning on style-specific corpora, Vevo matches or surpasses
-            existing methods
-            in accent and emotion conversion tasks. Additionally, Vevo's effectiveness in zero-shot voice
-            conversion and
-            text-to-speech tasks further demonstrates its strong generalization and versatility.
-
+            In this work, we introduce <b>Metis</b>, a foundation model for unified speech generation.
+            Unlike previous task-specific or multi-task models, Metis follows a pre-training and fine-tuning paradigm. It is pre-trained on large-scale unlabeled speech data using masked generative modeling and then fine-tuned to adapt to diverse speech generation tasks.
+            Specifically,
+            (1) Metis utilizes two discrete speech representations: SSL tokens derived from speech self-supervised learning features, and acoustic tokens directly quantized from waveforms.
+            (2) Metis performs <b>masked generative pre-training</b> on SSL tokens, utilizing 300K hours of diverse speech data, without any additional condition.
+            (3) Through fine-tuning with task-specific conditions, Metis achieves efficient adaptation to various speech generation tasks while <b>supporting multimodal input</b>, even when using limited data and trainable parameters.
+            Experiments demonstrate that Metis can serve as a foundation model for unified speech generation: Metis outperforms state-of-the-art task-specific or multi-task systems
+            across five speech generation tasks, including <b>zero-shot text-to-speech</b>, <b>voice conversion</b>, <b>target speaker extraction</b>, <b>speech enhancement</b>, and <b>lip-to-speech</b>, even with fewer than 20M trainable parameters or 300 times less training data.
+            We will release code and model checkpoints soon.
           </p>
         </div>
 
