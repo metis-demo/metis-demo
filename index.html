@@ -163,30 +163,18 @@
         </div>
 
         <div class="mt-8 mb-8" id="gallery">
-          <h4>What can Vevo do?</h4>
-          <div class="flex mx-auto justify-center max-w-screen-lg py-8">
-            <img src="static/vevo-inference.png"></img>
+          <div class="flex mx-auto justify-center max-w-screen-lg gap-8 py-8">
+            <img src="static/pre-train.png" class="w-1/2"></img>
+            <img src="static/finetune.png" class="w-1/2"></img>
           </div>
           <p>
-            Vevo can take <i>either</i> speech <i>or</i> text as input, and perform zero-shot imitation with
-            controllable linguistic
-            content (controlled by the source), style (controlled by the style reference), and timbre
-            (controlled by the
-            timbre reference) in a single forward pass. This inference pipeline can be adjusted for various
-            zero-shot
-            imitation tasks.
-          </p>
-          <p>
-            Given a source
-            speech (\( \textcolor{blue}{U_i} \)) or text (\( \textcolor{blue}{T_i} \)), and a
-            reference speech
-            (\( \textcolor{red}{U_r} \)),
-            we propose the following variants of Vevo according to the specific imitation task:
+            The overview of pre-training (left) and fine-tuning (right). The model predicts masked SSL tokens without any
+            condition during pre-training and then fine-tunes with the task-specific condition to adapt to various tasks.
           </p>
         </div>
 
 
-        <div class="w-full overflow-x-auto">
+        <!-- <div class="w-full overflow-x-auto">
           <div class="relative w-[700px] mx-auto text-sm text-left rtl:text-right text-gray-900">
             <table>
               <caption style="caption-side: bottom; text-align: left;"><b>Note</b>: For Vevo-Timbre, we
@@ -260,7 +248,7 @@
               </tbody>
             </table>
           </div>
-        </div>
+        </div> -->
 
 
 
