@@ -184,38 +184,6 @@
           <h4>Zero-shot Text-to-Speech</h4>
         </div>
 
-        <!-- <div class="w-full overflow-x-auto">
-          <div class="relative w-[1026px] mx-auto text-sm text-left rtl:text-right text-gray-900">
-            <table style="width: 100%;">
-              <thead>
-                <tr>
-                  <th style="text-align: center; width: 25%;">Text</th>
-                  <th style="text-align: center; width: 25%;">Prompt Speech</th>
-                  <th style="text-align: center; width: 25%;">Metis-TTS</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <p>Add text here.</p>
-                  </td>
-                  <td>
-                    <audio controls preload="metadata">
-                      <source src="data/tts/prompt_0.wav">
-                    </audio>
-                  </td>
-                  <td>
-                    <audio controls preload="metadata">
-                      <source src="data/tts/metis_0.wav">
-                    </audio>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div> -->
-
-
         <div class="w-full overflow-x-auto">
           <div class="relative w-[1026px] mx-auto text-sm text-left rtl:text-right text-gray-900">
             <table id="tts-table" style="width: 100%;">
@@ -245,8 +213,7 @@
                     </audio>
                   </td>
                 </tr>
-                // ... repeat pattern for 2 more celebrity examples ...
-        
+      
                 <!-- Anime Characters -->
                 <tr class="tts-anime">
                   <td style="background-color: #f4f4f4;" rowspan="3">
@@ -264,7 +231,8 @@
                     </audio>
                   </td>
                 </tr>
-                // ... repeat pattern for other domains ...
+
+
               </tbody>
             </table>
             <div id="pagination">
@@ -434,11 +402,7 @@
         <div class="mt-8 mb-8">
           <h4>Ethics Statement</h4>
           <p>
-            As with other powerful new AI innovations, we recognize this technology brings the potential for
-            misuse and
-            unintended harm. We will build a highly effective classifier that can distinguish between
-            authentic speech
-            and audio generated with Vevo to mitigate these possible future risks.
+            Given that our model is capable of synthesizing speech with high speaker similarity, it presents potential risks of misuse, including voice identification spoofing and speaker impersonation. To prevent potential misuse, it is crucial to develop robust synthesized speech detection models and implement a comprehensive system for reporting suspected misuse cases.
           </p>
         </div>
 
