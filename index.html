@@ -184,122 +184,317 @@
           <h4>Zero-shot Text-to-Speech</h4>
         </div>
 
+        <p>Metis-TTS can generate high-fidelity speech with strong speaker similarity by only fine-tuning on 1K or 10K hours of data, without requiring text-speech alignment information or a duration predictor.</p>
+
         <div class="w-full overflow-x-auto">
           <div class="relative w-[1026px] mx-auto text-sm text-left rtl:text-right text-gray-900">
             <table id="tts-table" style="width: 100%;">
               <thead>
                 <tr>
-                  <th style="text-align: center; width: 25%;">Domain</th>
+                  <th style="text-align: center; width: 10%;">Domain</th>
                   <th style="text-align: center; width: 25%;">Prompt Speech</th>
-                  <th style="text-align: center; width: 25%;">Text</th>
+                  <th style="text-align: center; width: 40%;">Text</th>
                   <th style="text-align: center; width: 25%;">Metis-TTS</th>
                 </tr>
               </thead>
               <tbody>
                 <!-- Celebrities -->
                 <tr class="tts-celebrities">
-                  <td style="background-color: #f4f4f4;" rowspan="3">
-                    <b>Celebrities</b>
+                  <td style="background-color: #f4f4f4;" rowspan="4">
+                    <b>Celebrities & Characters</b>
                   </td>
                   <td>
                     <audio controls preload="none">
-                      <source src="data/tts/celebrities/01_prompt.wav">
+                      <source src="data/tts/celeb/prompt_2.wav">
                     </audio>
                   </td>
-                  <td><p>Add text here.</p></td>
+                  <td><p style="font-size: 0.9em; text-align: center;">Listen, folks, let me tell you about language models. it's tremendous, really. It's like having the smartest, most powerful brain in the world, doing all the thinking for you, making everything faster, better, and stronge.</p></td>
                   <td>
                     <audio controls preload="none">
-                      <source src="data/tts/celebrities/01_metis.wav">
+                      <source src="data/tts/celeb/metis_2.wav">
                     </audio>
                   </td>
                 </tr>
 
-                <!-- Anime Characters -->
-                <tr class="tts-anime">
-                  <td style="background-color: #f4f4f4;" rowspan="3">
-                    <b>Anime Characters</b>
-                  </td>
+                <tr class="tts-celebrities">
                   <td>
                     <audio controls preload="none">
-                      <source src="data/tts/anime/01_prompt.wav">
+                      <source src="data/tts/celeb/prompt_3.wav">
                     </audio>
                   </td>
-                  <td><p>Add text here.</p></td>
+                  <td><p style="font-size: 0.9em; text-align: center;">Life's too short to get stuck in the same loop, selling pieces of fabric to people who don't even care. You see, Morty, the universe is infinite, full of chaos and possibilities.</p></td>
                   <td>
                     <audio controls preload="none">
-                      <source src="data/tts/anime/01_metis.wav">
+                      <source src="data/tts/celeb/metis_3.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-celebrities">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/celeb/prompt_0.mp3">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">Truly, it feels like Zhen's smile carries a certain charm.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/celeb/metis_0.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-celebrities">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/celeb/prompt_1.mp3">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">The Empress resides in Jingren Palace, while Her Majesty lives in Yikun Palace. In this harem, only our Yikun Palace shares the same "Kun" character as Kunning Palace, where the Emperor and Empress were wed.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/celeb/metis_1.wav">
                     </audio>
                   </td>
                 </tr>
 
                 <!-- Normal -->
                 <tr class="tts-normal">
-                  <td style="background-color: #f4f4f4;" rowspan="3">
+                  <td style="background-color: #f4f4f4;" rowspan="4">
                     <b>Normal</b>
                   </td>
                   <td>
                     <audio controls preload="none">
-                      <source src="data/tts/normal/01_prompt.wav">
+                      <source src="data/tts/normal/prompt_0.wav">
                     </audio>
                   </td>
-                  <td><p>Add text here.</p></td>
+                  <td><p style="font-size: 0.9em; text-align: center;">This staggering figure highlights the immense financial burden faced by individuals during that period, underscoring the economic challenges and legal pressures of the time.</p></td>
                   <td>
                     <audio controls preload="none">
-                      <source src="data/tts/normal/01_metis.wav">
+                      <source src="data/tts/normal/metis_0.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-normal">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/prompt_2.wav">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">This shift in audience demand is pushing the entertainment industry to embrace more diverse storytelling, with superheroes and protagonists from various cultural, racial, and gender backgrounds.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/metis_2.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-normal">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/prompt_3.wav">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">I want to share some of some of the traditions and customs that make it so special. Whether you're celebrating or just curious, I hope this gives you a deeper appreciation for what Thanksgiving means.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/metis_3.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-normal">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/prompt_1.wav">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">汉堡是一种源自德国的流行食品，如今已成为全球广受欢迎的快餐之一。它通常由两片圆形的面包夹着一块煎烤的肉饼，如牛肉、鸡肉或植物基替代品组成，并搭配各种配料。</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/normal/metis_1.wav">
                     </audio>
                   </td>
                 </tr>
 
                 <!-- Accent -->
                 <tr class="tts-accent">
-                  <td style="background-color: #f4f4f4;" rowspan="3">
+                  <td style="background-color: #f4f4f4;" rowspan="4">
                     <b>Accent</b>
                   </td>
                   <td>
                     <audio controls preload="none">
-                      <source src="data/tts/normal/01_prompt.wav">
+                      <source src="data/tts/accent/prompt_0.wav">
                     </audio>
                   </td>
-                  <td><p>Add text here.</p></td>
+                  <td><p style="font-size: 0.9em; text-align: center;">He had a vague recollection of hearing a strange noise, a sharp, almost metallic clang, but he couldn't place where it had come from.</p></td>
                   <td>
                     <audio controls preload="none">
-                      <source src="data/tts/normal/01_metis.wav">
+                      <source src="data/tts/accent/metis_0.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-accent">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/accent/prompt_1.wav">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">It is a very tenable hypothesis and will bear looking into.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/accent/metis_1.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-accent">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/accent/prompt_2.wav">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">Men like Joe Goose dated existence from drunk to drunk.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/accent/metis_2.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-accent">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/accent/prompt_4.wav">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">It is very plausible to such people a most convincing hypothesis.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/accent/metis_4.wav">
                     </audio>
                   </td>
                 </tr>
 
                 <!-- Emotion -->
                 <tr class="tts-emotion">
-                  <td style="background-color: #f4f4f4;" rowspan="3">
+                  <td style="background-color: #f4f4f4;" rowspan="4">
                     <b>Emotion</b>
                   </td>
                   <td>
                     <audio controls preload="none">
-                      <source src="data/tts/normal/01_prompt.wav">
+                      <source src="data/tts/emotion/prompt_0.wav">
                     </audio>
                   </td>
-                  <td><p>Add text here.</p></td>
+                  <td><p style="font-size: 0.9em; text-align: center;">Please invite Tom if there is not requires.</p></td>
                   <td>
                     <audio controls preload="none">
-                      <source src="data/tts/normal/01_metis.wav">
+                      <source src="data/tts/emotion/metis_0.wav">
                     </audio>
                   </td>
                 </tr>
 
+                <tr class="tts-emotion">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/emotion/prompt_2.wav">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">Born once every one hundred years, dies in flames!</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/emotion/metis_2.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-emotion">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/emotion/prompt_3.wav">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">On the twenty second of last march.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/emotion/metis_3.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-emotion">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/emotion/prompt_4.wav">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">Perhaps you think is a queer title for this chapter.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/emotion/metis_4.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+
                 <!-- Hard Cases -->
                 <tr class="tts-hard">
-                  <td style="background-color: #f4f4f4;" rowspan="3">
+                  <td style="background-color: #f4f4f4;" rowspan="4">
                     <b>Hard Cases</b>
                   </td>
                   <td>
                     <audio controls preload="none">
-                      <source src="data/tts/normal/01_prompt.wav">
+                      <source src="data/tts/hard_cases/prompt_1.wav">
                     </audio>
                   </td>
-                  <td><p>Add text here.</p></td>
+                  <td><p style="font-size: 0.9em; text-align: center;">I thought a thought. But the thought I thought wasn't the thought I thought I thought. If the thought I thought I thought had been the thought I thought, I wouldn't have thought so much.</p></td>
                   <td>
                     <audio controls preload="none">
-                      <source src="data/tts/normal/01_metis.wav">
+                      <source src="data/tts/hard_cases/metis_1.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-hard">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/hard_cases/prompt_2.wav">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">Whether the weather be fine or whether the weather be not, whether the weather be cold or whether the weather be hot. Well weather the weather whether we like it or not.</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/hard_cases/metis_2.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-hard">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/hard_cases/prompt_0.wav">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">墙上画凤凰，凤凰画在粉红墙。红凤凰、粉凤凰，红粉凤凰、花凤凰。红凤凰，黄凤凰，红粉凤凰，粉红凤凰，花粉花凤凰。</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/hard_cases/metis_0.wav">
+                    </audio>
+                  </td>
+                </tr>
+
+                <tr class="tts-hard">
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/hard_cases/prompt_3.wav">
+                    </audio>
+                  </td>
+                  <td><p style="font-size: 0.9em; text-align: center;">南南和兰兰南南帮阿姨摆盘，兰兰帮阿姨摆碗。碗对着盘，盘对着碗。阿姨夸南南和兰兰，把碗盘摆的真好看。</p></td>
+                  <td>
+                    <audio controls preload="none">
+                      <source src="data/tts/hard_cases/metis_3.wav">
                     </audio>
                   </td>
                 </tr>
@@ -310,8 +505,7 @@
               <span class="page-guide">
                 Different domains
               </span>
-              <button onclick="showTTSPage('tts-celebrities')">Celebrities</button>
-              <button onclick="showTTSPage('tts-anime')">Anime Characters</button>
+              <button onclick="showTTSPage('tts-celebrities')">Celebrities & Characters</button>
               <button onclick="showTTSPage('tts-normal')">Normal</button>
               <button onclick="showTTSPage('tts-accent')">Accent</button>
               <button onclick="showTTSPage('tts-emotion')">Emotion</button>
@@ -360,6 +554,7 @@
         <div class="mt-8 mb-8" id="metis-se">
           <h4>Speech Enhancement</h4>
         </div>
+        <p>Metis-SE supports general speech restoration, including denoising, dereverberation, declipping, and super-resolution up to 24 kHz.</p>
 
         <div class="w-full overflow-x-auto">
           <div class="relative w-[1026px] mx-auto text-sm text-left rtl:text-right text-gray-900">
@@ -533,6 +728,7 @@
         <div class="mt-8 mb-8" id="metis-tse">
           <h4>Target Speaker Extraction</h4>
         </div>
+        <p>Metis-TSE supports target speaker extraction for diverse speakers across multilingual and in-the-wild scenarios.</p>
 
         <div class="w-full overflow-x-auto">
           <div class="relative w-[1026px] mx-auto text-sm text-left rtl:text-right text-gray-900">
